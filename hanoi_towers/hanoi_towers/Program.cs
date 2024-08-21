@@ -10,7 +10,7 @@
             }
             // Load the disk to the stick
             public void loadDisk(int diskSize){
-                for (int i = 1; i < diskArray.Length + 1; i++)
+                for (int i = 1; i < diskSize + 1; i++)
                     this.diskArray[i - 1] = diskArray.Length + 1 - i;
             }
             // Print the disk in the stick
@@ -34,9 +34,9 @@
             Console.WriteLine("How many disk we have in game?");
             int diskCount = Convert.ToInt32(Console.ReadLine());
             // Create 3 sticks
-            Stick sourceStick = new Stick("A", diskCount);
-            Stick destStick = new Stick("B", diskCount);
-            Stick midStick = new Stick("C", diskCount);
+            Stick sourceStick = new Stick("Source", diskCount);
+            Stick destStick = new Stick("Destination", diskCount);
+            Stick midStick = new Stick("Middle", diskCount);
             sourceStick.loadDisk(diskCount);
             // Print the disk in the source stick
             Console.WriteLine("Current sourceStick:");
